@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B@jos</title>
+    <link rel="stylesheet" href="bajo.css">
+    <link rel="shortcut icon" href="data:image/jpeg;base64,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" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+        <section class="titulo">
+            <h1>B@JOS </h1>
+        </section>
+
+        <section class="slider">
+            <ul>
+                <li><img src="images/slider/23.jpg" ></li>
+                <li><img src="images/slider/24.jpg"></li>
+                <li><img src="images/slider/25.jpg"></li>
+                <li><img src="images/slider/26.jpg"></li>
+                <li><img src="images/slider/27.jpg" ></li>
+                <li><img src="images/slider/28.jpg"></li>
+            </ul>
+        </section> 
+        <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-4.22,85.36 C106.94,-95.22 304.46,222.53 513.26,-13.31 L503.10,154.44 L-1.97,151.47 Z" style="stroke: none; fill:hsla(0, 0%, 0%, 0.884);"  ></path></svg></div>
+    </header>
+
+    <nav class="navegacion">
+		<ul class="menu">
+
+			<li class="first-item">
+				<a href="Teclado.html">
+					<img src="https://previews.123rf.com/images/christefme/christefme1602/christefme160200221/52726361-sintetizador-en-sombras-la-m%C3%BAsica-en-el-fondo-negro.jpg" alt="" class="imagen">
+					<div class="text-item">Teclados</div>
+					<div class="down-item"></div>
+				</a>
+			</li>
+
+			<li>
+				<a href="Guitarra.html">
+					<img src="https://image.freepik.com/foto-gratis/guitarra-electrica-negra-sobre-fondo-piso-cemento-negro_34515-626.jpg" alt="" class="imagen">
+					<div class="text-item">Guitarra</div>
+					<div class="down-item"></div>
+				</a>
+			</li>
+
+			<li>
+				<a href="Bateria.html">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSkgN6q04-0r7n6kKNkR6PX9KmLClvmbbolug&usqp=CAU" alt="" class="imagen">
+					<div class="text-item">Baterias</div>
+					<div class="down-item"></div>
+				</a>
+			</li>
+
+			<li>
+				<a href="Bajos.html">
+                    <img src="https://static.bax-shop.es/image/product/65701/453250/6df52415/450x450/1442835503squier_mike_dirnt_precision_bass_prlpg_black_mn_front.jpg" alt="" class="imagen">
+					<div class="text-item">Bajos</div>
+					<div class="down-item"></div>
+				</a>
+			</li>
+
+			<li>
+				<a href="Otros.html">
+					<img src="https://d26lpennugtm8s.cloudfront.net/stores/845/292/products/911201-mla25922236164_082017-o-7bca1f1df25506269e15503554727540-1024-1024.jpg" alt="" class="imagen">
+					<div class="text-item">Otros</div>
+					<div class="down-item"></div>
+				</a>
+			</li>
+
+		</ul>
+    </nav>
+
+    <aside class="izq"></aside>
+
+    <article>
+        <h1>Indispensable En Un Grupo </h1> 
+        <h2 >|||| DISTINTOS || TIPO Y MODELOS DE BAJOS||||</h2>
+        <h3> > Fender Deluxe P-Bass Special</h3>
+        <aside class="sesgoDerecho">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+             Beatae placeat doloremque omnis deserunt dignissimos! Ex,
+              quidem sit in eos ipsa minus corporis praesentium non similique 
+              voluptates aperiam nostrum aliquid? Odit sed debitis, nulla dolor 
+              reprehenderit modi alias accusantium pariatur sit dicta quos,
+               maiores minima aspernatur voluptatum sint numquam fugit optio!           
+        </aside>
+
+        <figure class="imagenDerecho">
+            <img src="https://w7.pngwing.com/pngs/363/371/png-transparent-fender-precision-bass-fender-jazz-bass-v-fender-stratocaster-fender-bass-v-fender-jazzmaster-bass-guitar-pickup-double-bass-guitar-accessory.png">
+            <figcaption >
+                <center><p>Mas cuerdas extras</p></center>
+                <center><p>A 1000 U$$</p></center>
+            </figcaption>
+        </figure>
+        
+        <h3>Cort Jeff Berlin Series Rithimic Bass</b></h3>
+        <figure class="imagenIzquierdo">
+            <img src="https://www.cortguitars.com/_DATA/item/1585618251/RITHMICFull.png">
+            <figcaption >
+                <center><p>Precio</p></center>
+                <center><p>A 980 U$$</p></center>
+
+            </figcaption>
+        </figure>
+        <aside class="sesgoIzquierdo">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+             Beatae placeat doloremque omnis deserunt dignissimos! Ex,
+              quidem sit in eos ipsa minus corporis praesentium non similique 
+              voluptates aperiam nostrum aliquid? Odit sed debitis, nulla dolor 
+              reprehenderit modi alias accusantium pariatur sit dicta quos,
+               maiores minima aspernatur voluptatum sint numquam fugit optio!
+        </aside>
+
+        <h3>Yamaha TRBX174EW</h3>
+        <aside class="sesgoDerecho">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+             Beatae placeat doloremque omnis deserunt dignissimos! Ex,
+              quidem sit in eos ipsa minus corporis praesentium non similique 
+              voluptates aperiam nostrum aliquid? Odit sed debitis, nulla dolor 
+              reprehenderit modi alias accusantium pariatur sit dicta quos,
+               maiores minima aspernatur voluptatum sint numquam fugit optio!
+        </aside>
+
+
+        <figure class="imagenDerecho">
+            <img src="https://cdnx.jumpseller.com/instruments/image/3862758/resize/635/635?1589579746">
+            <figcaption >
+                <center><p>Precio</p></center>
+                <center><p>A 1200 U$$</p></center>
+            </figcaption>
+        </figure>
+
+        <h3>Squier Vintage Modified Jaguar Bass Special SS</h3>
+        <figure class="imagenIzquierdo">
+            <img src="https://images.samash.com/sa/F88/F8800XXXXX.fpx?cvt=jpg" >
+            <figcaption >
+                <center><p>Precio</p></center>
+                <center><p>A 2100 U$$</p></center>
+            </figcaption>
+        </figure>
+        <aside class="sesgoIzquierdo">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+             Beatae placeat doloremque omnis deserunt dignissimos! Ex,
+              quidem sit in eos ipsa minus corporis praesentium non similique 
+              voluptates aperiam nostrum aliquid? Odit sed debitis, nulla dolor 
+              reprehenderit modi alias accusantium pariatur sit dicta quos,
+               maiores minima aspernatur voluptatum sint numquam fugit optio!
+        </aside>
+
+        <h3>Schecter Stiletto Custom-4</h3>
+        <aside class="sesgoDerecho">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+             Beatae placeat doloremque omnis deserunt dignissimos! Ex,
+              quidem sit in eos ipsa minus corporis praesentium non similique 
+              voluptates aperiam nostrum aliquid? Odit sed debitis, nulla dolor 
+              reprehenderit modi alias accusantium pariatur sit dicta quos,
+               maiores minima aspernatur voluptatum sint numquam fugit optio!
+        </aside>
+
+        <figure class="imagenDerecho">
+            <img src="https://www.schecterguitars.com/images/store/product/STILETTO%20CUSTOM%204%20NAT%20TILT.png">
+            <figcaption >
+                <center><p>Mas su estuche metalico </p></center>
+                <center><p>A 1800 U$$</p></center>
+                
+            </figcaption>
+        </figure>
+
+        <h3>Dean Custom Zone Bass</h3>
+        <figure class="imagenIzquierdo">
+            <img src="https://www.deanguitars.com/images/productimages/czonebassng/czonebassng.png">
+            <figcaption >
+                <center><p>Precio</p></center>
+                <center><p>A 2400 U$$</p></center>
+            </figcaption>
+        </figure>
+        <aside class="sesgoIzquierdo">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+             Beatae placeat doloremque omnis deserunt dignissimos! Ex,
+              quidem sit in eos ipsa minus corporis praesentium non similique 
+              voluptates aperiam nostrum aliquid? Odit sed debitis, nulla dolor 
+              reprehenderit modi alias accusantium pariatur sit dicta quos,
+               maiores minima aspernatur voluptatum sint numquam fugit optio!
+
+        </aside>
+        
+        <h3>Ibanez GSR200</h3>
+        <aside class="sesgoDerecho">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+             Beatae placeat doloremque omnis deserunt dignissimos! Ex,
+              quidem sit in eos ipsa minus corporis praesentium non similique 
+              voluptates aperiam nostrum aliquid? Odit sed debitis, nulla dolor 
+              reprehenderit modi alias accusantium pariatur sit dicta quos,
+               maiores minima aspernatur voluptatum sint numquam fugit optio!
+        </aside>
+
+        <figure class="imagenDerecho">
+            <img src="https://rocktownmusic.net/wp-content/uploads/2016/10/New-Ibanez-GSR200-Bass.png">
+            <figcaption >
+                <center><p>Mas amplificador</p></center>
+                <center><p>A 2600 U$$</p></center>
+            </figcaption>
+        </figure>
+
+        <h3>Fender American Professional Precision Bass</h3>
+        <figure class="imagenIzquierdo">
+            <img src="https://w7.pngwing.com/pngs/513/560/png-transparent-fender-precision-bass-bass-guitar-fingerboard-fender-musical-instruments-corporation-bass-double-bass-guitar-accessory-string-instrument.png">
+            <figcaption >
+                <center><p>Precio</p></center>
+                <center><p>A 2500 U$$</p></center>
+            </figcaption>
+        </figure>
+        <aside class="sesgoIzquierdo">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+             Beatae placeat doloremque omnis deserunt dignissimos! Ex,
+              quidem sit in eos ipsa minus corporis praesentium non similique 
+              voluptates aperiam nostrum aliquid? Odit sed debitis, nulla dolor 
+              reprehenderit modi alias accusantium pariatur sit dicta quos,
+               maiores minima aspernatur voluptatum sint numquam fugit optio!
+
+        </aside>
+
+        <h3>Hofner Ignition Beatle Bass 500/1</h3>
+        <aside class="sesgoDerecho">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+             Beatae placeat doloremque omnis deserunt dignissimos! Ex,
+              quidem sit in eos ipsa minus corporis praesentium non similique 
+              voluptates aperiam nostrum aliquid? Odit sed debitis, nulla dolor 
+              reprehenderit modi alias accusantium pariatur sit dicta quos,
+               maiores minima aspernatur voluptatum sint numquam fugit optio!
+        </aside>
+
+        <figure class="imagenDerecho">
+            <img src="https://files2.soniccdn.com/imagecache/c6f/0fe5407b7d60635d5950799bf183e-1044404.jpg">
+            <figcaption >
+                <center><p>Precio</p></center>
+                <center><p>A 3100 U$$</p></center>
+            </figcaption>
+        </figure>
+
+        <h3>Ibanez SRAS7DEB SR Bass</h3>
+        <figure class="imagenIzquierdo">
+            <img src="https://www.ibanez.com/common/product_artist_file/file/pm_main_eb_sr_us_sp.png">
+            <figcaption >
+                <center><p>Mas amoplificador</p></center>
+                <center><p>A 2100 U$$</p></center>
+            </figcaption>
+        </figure>
+        <aside class="sesgoIzquierdo">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+             Beatae placeat doloremque omnis deserunt dignissimos! Ex,
+              quidem sit in eos ipsa minus corporis praesentium non similique 
+              voluptates aperiam nostrum aliquid? Odit sed debitis, nulla dolor 
+              reprehenderit modi alias accusantium pariatur sit dicta quos,
+               maiores minima aspernatur voluptatum sint numquam fugit optio!
+
+        </aside>
+
+        <h3>Ibanez SRMS806-BTT</h3>
+        <aside class="sesgoDerecho">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+             Beatae placeat doloremque omnis deserunt dignissimos! Ex,
+              quidem sit in eos ipsa minus corporis praesentium non similique 
+              voluptates aperiam nostrum aliquid? Odit sed debitis, nulla dolor 
+              reprehenderit modi alias accusantium pariatur sit dicta quos,
+               maiores minima aspernatur voluptatum sint numquam fugit optio!
+        </aside>
+
+        <figure class="imagenDerecho">
+            <img src="https://www.instrumentos10.top/wp-content/uploads/2019/01/https-images-static-thomann-de-pics-prod-429019--e1550512577243.jpeg">
+            <figcaption >
+                <center><p>Mas los sonidos</p></center>
+                <center><p>A 2100 U$$</p></center>
+                <center><p>Sonidos y Ritmos Integrados</p></center>
+            </figcaption>
+        </figure>
+
+        <div class="cuerda">
+            <div class="cuerdas4">
+                <figure>
+                    <img src="images/20.png" >
+                    <figcaption >
+                            <h4>Bajo de 4 cuerdas</h4>
+                            <p>Guay, cuatro parece un numero razonable</p>
+                            <p>para empezar</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="cuerdas5">
+                <figure>
+                    <img src="images/21.png" >
+                    <figcaption >
+                            <h4>Bajo de 5 cuerdas</h4>
+                            <p>Mmm...¿cinco?, vale, le sumamos una </p>
+                            <p>cuerda mas.</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="cuerdas6">
+                <figure>
+                    <img src="https://previews.123rf.com/images/belchonock/belchonock1812/belchonock181211674/114224805-electric-guitar-on-black-background-top-view-musical-instrument.jpg" >
+                    <figcaption >                        
+                            <h4>Bajo de 6 cuerdas</h4>
+                            <p>Wow, wow, ¡wow! como que seis, ¿que </p>
+                            <p>esta pasando aqui?</p>
+                    </figcaption>
+                </figure>
+
+            </div>
+        </div>
+        <div class="fin">
+            <p>Distintos tipos de <b>BAJOS</b> tanto austica como electricas</p>
+            <p>Marcas como Fodera, Fender, Ibanez, Jerzy Drozd.....</p>
+            <p>Con todos los componentes como cable plug, cuerdas metalicas, amplificador .....</p>
+        </div>
+        
+    </article>
+    <aside class="der"> </aside>
+    <footer>
+       
+        <div class="footer1">
+            <h1>Acerca De Nosotros</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto assumenda quaerat magni culpa perspiciatis. Reiciendis, quo vel ipsum maiores praesentium laborum doloribus consequatur quas nisi rem, distinctio minus quam sequi!</p>
+            <a href="index.html"> Pagina Principal</a>
+        </div>
+
+        <div class="footer3">
+            <h2>Contactanos</h2>
+            <form action="Bajos.html" method="post">
+                <input type="text" name="name" class="email" placeholder="Nombre Completo" >
+                <input type="password" name="psw" class="email" placeholder="Num. Cel." >
+                <input type="email" name="email" class="email" placeholder="email">
+                <textarea  name="message" class="text-input" placeholder="Comentar....."></textarea>
+                <button type="submit" class="btn">enviar</button>
+                
+                <select name="Country-Pais"  class="pais">
+                    <option value="Country-Pais">Country-Pais</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Peru">Peru</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="Argentina">Brasil</option>
+                    <option value="EEUU">EEUU</option>
+                    <option value="Otro Comenta">Otro Comenta</option>
+                </select>
+            </form>
+        </div>
+
+        <div class="copyright">
+            @PageExpress.com | Dign From Me
+        </div>
+    </footer>
+
+</body>
+</html>
